@@ -1,0 +1,95 @@
+<div *ngIf="monPanier" class="panier">
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Selection</th>
+          <th scope="col">Quantité</th>
+          <th scope="col">Total</th>
+          <th>Effacer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let panier of monPanier">
+          <th scope="row">{{panier.box.nom}}</th>
+          <td id="laQuan" style="text-align:center;"><button (click)="delete(panier.box)" style="margin-right:5px"
+              id="pm">-</button>{{panier.quantite}}<button (click)="add(panier.box)" style="margin-left:5px"
+              id="pm">+</button></td>
+          <td id="lePrix">{{panier.box.prix * panier.quantite | number:"1.2-2" }} €</td>
+          <th><button (click)="effacer(panier.box)" id="pm"><i class="bi bi-trash"></i></button></th>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row" colspan="2">Prix total</th>
+          <td>{{getResult() | number:'1.2-2'}}€</td>
+          <td>
+            <div *ngIf="getResult() > 0">
+              <!-- Confirmer -->
+              <div class="annule">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1"
+                  style="background-color:#2C3E50; border: solid 2px; margin-top:10px;">
+                  Est-ce que ti vé commander ?
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: black;">Confirmer la commande ?</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                      </div>
+                      <div class="modal-body" style="text-align:center; font-size:30px;color: black;">
+                        Commande n° <em>{{getNum()}}</em>
+                      </div>
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                      style="background-color: rgb(163, 2, 2); border: none;">Ti n'a pas lé droit d'abandonner</button>
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                          style="background-color: #2C3E50;" (click)="confirme(getResult(),monPanier)">Ti a lé droit dé confirmer </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+
+  <!-- Annuler -->
+  <div class="annule" *ngIf="getResult() > 0">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+      style="background-color: rgb(163, 2, 2); border: none; margin-top:10px;">
+      Est-ce que ti vé abandonner ?
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Annuler la commande</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" style="text-align:center; font-size:113px;">
+            Fir ?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+              style="background-color: #2C3E50;">Ti n'a pas lé droit d'abandonner</button>
+            <button type="button" class="btn btn-primary" (click)="nvPanier()"
+              style="background-color: rgb(163, 2, 2); border: none;">Ti es pathétique</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

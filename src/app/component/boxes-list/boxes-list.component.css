@@ -1,0 +1,76 @@
+.card {
+    width: 400px; /*1*/
+    margin: 10px; /*2*/
+    background: linear-gradient(white,rgb(228, 225, 225)); /*3*/
+    border-color: white;
+    
+}
+.card a { /*5*/
+    color: #333; 
+    text-decoration: none;
+}
+.card:hover .card-image img { /*6*/
+    width: 120%;
+    filter: grayscale(0);
+}
+
+.card:hover{
+    width: 400px; /*1*/
+    margin: 10px; /*2*/
+    background: linear-gradient(white,rgb(228, 225, 225)); 
+    box-shadow: 0px 5px 50px #2C3E50; /*4*/
+    
+  }
+
+
+  #pm{
+    border: none;
+    background: none;
+    font-size: 20px;
+  }
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    margin: 30px;
+    margin-bottom: 170px;
+    box-shadow: 0px 5px 50px #221f1e; /*4*/
+    border-radius: 7px;
+    background: radial-gradient(white,rgb(182, 181, 181));
+
+}
+.card-body{
+    text-align: center;
+}
+.card-body h3{
+    font-family: 'Times New Roman', Times, serif;
+}
+.card-saveur h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10px;
+}
+/* .card-prix button{
+    border-radius: 7px;
+    border-width: 1px;
+
+} */
+
+
+  .card-image {
+    height: 250px;/*1*/
+    position: relative;/*2*/
+    overflow: hidden;/*3*/
+  }
+  .card-image img {
+    width: 100%;/*4*/
+      /*5 - Méthode de centrage en fonction de la taille de l'image */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+      /*7 - Transition */
+    transition-property: filter width; 
+    transition-duration: .3s;
+    transition-timing-function: ease;
+  }

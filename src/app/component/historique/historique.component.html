@@ -1,0 +1,24 @@
+<div>
+    <button (click)="delete()">Ti vé sipprimé ?</button>
+</div>
+
+<div class="commande-container" *ngIf="historique !! empty">
+    <div *ngFor="let commande of historique" class="commande">
+        <div>
+            <p class="commande-info">Numéro de commande : {{commande.numC}}</p>
+            <p class="commande-info">Prix total : {{commande.prix | number:"1.2-2"}}€</p>
+            <table class="panier-table">
+                <tr>
+                    <th style="width: 33%;">Produit</th>
+                    <th style="width: 33%;">Quantité</th>
+                    <th style="width: 33%;">Prix</th>
+                </tr>
+                <tr *ngFor="let panier of commande.laCommande">
+                    <td>{{panier.box.nom}}</td>
+                    <td>{{panier.quantite}}</td>
+                    <td>{{panier.box.prix | number:"1.2-2"}}€</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

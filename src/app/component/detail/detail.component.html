@@ -1,0 +1,29 @@
+<link href="detail.component.css" rel="stylesheet">
+
+<div *ngIf="boxes">
+    <div *ngFor="let box of boxes">
+        <div *ngIf=" box.id == boxId" class="laCard">
+            <div class="gauche">
+                <img src="http://localhost:8080/api/image/{{box.image}}">
+            </div>
+
+            <div class="droite">
+                <h2>{{box.nom}}</h2>
+                <div class="lesP">
+                    <p>{{box.pieces}} PIÈCES</p> <h4>{{box.prix}}0 €<button (click)="localS(box)">+</button></h4>
+                </div>
+                <h4>COMPOSITION</h4>
+                <p style="text-transform: capitalize;">{{box.saveurs}}</p>
+                <!-- <h3>Les aliments : </h3> -->
+                <div *ngFor="let aliment of box.aliments">
+                    
+                    <ul>
+                        <li>{{aliment.quantite}} {{aliment.nom}}</li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+.laNav{
+    background-color: #2C3E50;
+}
+
+.laNav a{
+    color: white;
+}
+
+ul li a:hover{
+    text-decoration: underline #889aac;
+    color: #889aac;
+}
+

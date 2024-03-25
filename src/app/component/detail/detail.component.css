@@ -1,0 +1,48 @@
+.laCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 500px;
+    /* width: 80%; */
+    /* padding-left: 5%; */
+    padding-right: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    border-color:transparent;
+    
+    margin-top:50px;
+    margin-left: 5%;
+    margin-right:5%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.gauche img{
+    height: 100%;
+}
+
+
+.droite{
+    padding-top: 30px;
+    padding-right: 50px;
+    width: 900px;
+}
+
+.droite .lesP{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Montsserat';
+}
+.droite .lesP p{
+    font-size: 15px;
+}
+
+.droite .lesP button{
+        border-radius: 7px;
+        border-width: 1px;
+        margin-left:10px;
+}
