@@ -29,7 +29,7 @@
               <div class="annule">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1"
                   style="background-color:#2C3E50; border: solid 2px; margin-top:10px;">
-                  Est-ce que ti vé commander ?
+                  Commander
                 </button>
 
                 <!-- Modal -->
@@ -38,8 +38,9 @@
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: black;">Confirmer la commande ?</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: black;">Confirmer la commande
+                          ?</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body" style="text-align:center; font-size:30px;color: black;">
                         Commande n° <em>{{getNum()}}</em>
@@ -47,10 +48,11 @@
 
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                      style="background-color: rgb(163, 2, 2); border: none;">Ti n'a pas lé droit d'abandonner</button>
+                          style="background-color: rgb(163, 2, 2); border: none;">Retour</button>
 
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                          style="background-color: #2C3E50;" (click)="confirme(getResult(),monPanier)">Ti a lé droit dé confirmer </button>
+                          style="background-color: #2C3E50;" (click)="confirme(getResult(),monPanier)">Confirmer la
+                          commande</button>
                       </div>
                     </div>
                   </div>
@@ -68,9 +70,8 @@
   <div class="annule" *ngIf="getResult() > 0">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
       style="background-color: rgb(163, 2, 2); border: none; margin-top:10px;">
-      Est-ce que ti vé abandonner ?
+      Annuler la commande
     </button>
-
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">

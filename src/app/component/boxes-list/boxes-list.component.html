@@ -2,34 +2,36 @@
     <div *ngFor="let box of boxes">
 
         <div class="card">
-            <a routerLink="detail/{{box.id}}" >
+            <a routerLink="detail/{{box.id}}">
                 <!-- Image à la une -->
                 <div class="card-image">
                     <img src="http://localhost:8080/api/image/{{box.image}}" alt="Orange" />
                 </div>
                 <!-- Fin de l'image à la une -->
             </a>
-        
-                <!-- Corp de notre carte -->
-                <div class="card-body">
-        
-                    <!-- Prix de la box-->
-                    <div class="card-prix" style="display: flex; flex-direction: row; margin-left: 130px;">
-                        <button id="pm" (click)="localM(box)">-</button><h6 style="padding-left: 5px; padding-right:5px; padding-top:10px;">{{box.prix}}0 €</h6><button id="pm" (click)="localS(box)">+</button>
-                    </div>
-        
-                    <!-- Titre de la box -->
-                    <div class="card-title">
-                        <h3>{{box.nom}}</h3>
-                    </div>
-                    <!-- Saveurs de la box -->
-                    <div class="card-saveur">
-                        <!-- <h3>{{box.saveurs}}</h3> -->
-                    </div>
-        
+
+            <!-- Corp de notre carte -->
+            <div class="card-body">
+
+                <!-- Prix de la box-->
+                <div class="card-prix" style="display: flex; flex-direction: row; margin-left: 130px;">
+                    <button id="pm" (click)="localM(box)">-</button>
+                    <h6 style="padding-left: 5px; padding-right:5px; padding-top:10px;">{{box.prix}}0 €</h6><button
+                        id="pm" (click)="localS(box)">+</button>
                 </div>
-                <!-- Fin du corp de notre carte -->
-            
+
+                <!-- Titre de la box -->
+                <div class="card-title">
+                    <h3>{{box.nom}}</h3>
+                </div>
+                <!-- Saveurs de la box -->
+                <div class="card-saveur">
+                    <!-- <h3>{{box.saveurs}}</h3> -->
+                </div>
+
+            </div>
+            <!-- Fin du corp de notre carte -->
+
         </div>
     </div>
 </div>

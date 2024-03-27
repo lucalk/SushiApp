@@ -8,17 +8,18 @@ import { CommandeService } from '../../service/commande.service';
   styleUrl: './historique.component.css'
 })
 export class HistoriqueComponent {
-  historique:any=[]
+  // Déclare un tableau pour stocker l'historique des commandes
+  historique: any = [];
 
-
-  constructor(private commandeService:CommandeService){
-    this.historique = this.commandeService.getCommande()
+  // Constructeur de la classe
+  constructor(private commandeService: CommandeService) {
+    // Initialise l'historique en récupérant les données des commandes à partir du service commandeService
+    this.historique = this.commandeService.getCommande();
   }
 
-  delete(){
-    this.commandeService.deleteHist()
+  // Méthode pour supprimer l'historique des commandes
+  delete() {
+    // Appelle la méthode deleteHist du service commandeService pour supprimer l'historique
+    this.commandeService.deleteHist();
   }
-
-  
-
 }

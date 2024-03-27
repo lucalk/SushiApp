@@ -1,4 +1,3 @@
-import { Panier } from "./Panier"
 import { Box } from "./Box"
 
 export interface iPanier {
