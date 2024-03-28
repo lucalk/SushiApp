@@ -1,0 +1,209 @@
+= Compte Rendu E5
+:toc:
+:toc-title: Sommaire
+
+
+
+== Maquette
+Page d'accueil
+
+image::site.png/menu.png[]
+
+Page d'une boxe
+
+image::site.png//detail.png[]
+
+Panier
+
+image::site.png//panier.png[]
+
+Historique
+
+image::site.png//historique.png[]
+
+Confirmation de commande
+
+image::site.png//confirmation.png[]
+
+Structure JSON
+
+image::site.png//Panier-sushi.png[]
+
+
+
+== Header
+Source : header.component.html
+
+image::site.png//headerHTML.png[]
+
+=== Résultat final
+
+image::site.png//header.png[]
+
+
+
+== Footer
+Source : footer.component.html
+
+image::site.png//footerHTML.png[]
+
+=== Résultat final
+
+image::site.png//footer.png[]
+
+
+
+== Configuration du lien d'API
+Source : environment.ts
+
+image::site.png//envir.png[]
+
+Source : environment.development.ts
+
+image::site.png//envir-dev.png[]
+
+
+
+== Page d'accueil
+=== Service
+Source : lookup-box.service.ts
+
+image::site.png//lookUpServ.png[]
+=== Boxes component
+Source : boxes-list.component.ts
+
+image::site.png//importLookUpServ.png[]
+image::site.png//boxes-list-component.png[]
+
+=== Affichage
+
+Source : boxes-list.html
+
+image::site.png//boxes-listHTML.png[]
+
+=== Resultat final
+
+image::site.png//accueil.png[]
+
+
+
+== Détail d'une boxe
+
+=== Models
+Source : iBox.ts
+
+image::site.png//model-iBox.png[]
+
+Source : Box.ts
+
+image::site.png//model-box.png[]
+
+=== Details component
+Source : detail.component.ts
+
+image::site.png//detail-component1.png[]
+image::site.png//detail-component2.png[]
+====
+ngOnInit() : Permet de récuperer les données d'une boxe spécifique
+
+localS() : Permet d'ajouter une boxe au panier
+
+localD() : Permet de retirer une boxe du panier
+====
+
+=== Résultat final
+image::site.png//detailFinal.png[]
+
+
+== Réalisation de la page RGPD
+Source : rgpd.component.html
+
+image::site.png//rgpdHTML.png[]
+=== Résultat final
+image::site.png//RGPD.png[]
+
+
+== Panier
+=== Models
+Source : iPanier.ts
+
+image::site.png//model-iPanier.png[]
+
+Source : Panier.ts
+
+image::site.png//model-panier.png[]
+=== Service
+Source : add-panier.service.ts
+
+image::site.png//servAddPanier1.png[]
+image::site.png//servAddPanier2.png[]
+image::site.png//servAddPanier3.png[]
+image::site.png//servAddPanier4.png[]
+====
+addBox() : Permet d'ajouter une box au panier
+
+dBox() : Permet de retirer une box du panier
+
+trash() : Permet de suprimer toute une ligne du panier
+
+getNumCom() : Permet de generer un numéro de commande
+
+getPanier() : Permet de retourner le panier
+
+getResult() : Permet de calculer le prix total d'une commande
+
+resetPanier() : Permet de reset le panier
+====
+
+=== Panier component
+Source : panier.component.ts
+
+image::site.png//panierComponent1.png[]
+image::
+
+=== Résultat final
+image::site.png//renduPanier.png[]
+
+
+
+== Commande
+( concernant l'historique)
+
+=== Models
+Source : iCommande.ts
+
+image::site.png//model-iCommande.png[]
+
+Source : Commande.ts
+
+image::site.png//model-commande.png[]
+
+=== Service
+
+Source : commande.service.ts
+
+image::site.png//servCommande1.png[]
+image::site.png//servCommande2.png[]
+
+== Commander
+
+=== Confirmation de commande
+image::site.png//confirmCommande.png[]
+
+== Historique
+
+Source : historique.component.ts
+
+image::site.png//historiqueComponent.png[]
+Source : historique.component.html
+
+image::site.png//historiqueHTML.png[]
+Rendu final
+
+image::site.png//renduHistorique.png[]
+
+
+
+
+
+
