@@ -3,7 +3,9 @@
 :toc-title: Sommaire
 
 Luca KIUSI
+
 Dépôt GitHub : https://github.com/lucalk/SushiApp
+
 Lien de l’application : https://lucalk.github.io/SushiApp/
 
 
