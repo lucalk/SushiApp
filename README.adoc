@@ -1,12 +1,14 @@
 = Compte Rendu E5
-:toc:
-:toc-title: Sommaire
 
 Luca KIUSI
 
 Dépôt GitHub : https://github.com/lucalk/SushiApp
 
 Lien de l’application : https://lucalk.github.io/SushiApp/
+
+
+:toc:
+:toc-title: Sommaire
 
 
 
